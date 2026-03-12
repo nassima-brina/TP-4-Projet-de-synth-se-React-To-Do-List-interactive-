@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# TP 4 — Projet de synthèse React – To-Do List interactive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📚 Cours
+Développement Front-End moderne avec React
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Contexte
 
-### `npm start`
+#### Ce TP constitue le projet de synthèse final du cours Développement Front-End moderne avec React. Il regroupe l'ensemble des notions vues dans les TPs précédents : composants fonctionnels, gestion du state, événements utilisateurs, navigation et intégration de styles CSS.
+#### Le but est de construire une application complète et fonctionnelle de A à Z : une To-Do List interactive permettant d'ajouter, cocher, modifier et supprimer des tâches.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Objectifs
 
-### `npm test`
+#### - Créer une application React complète et structurée
+#### - Gérer le state global avec useState
+#### - Gérer les événements utilisateurs (ajout, suppression, modification)
+#### - Structurer les composants de manière professionnelle
+#### - Déployer l'application en production
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technologies utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### - React 18
+#### - JavaScript 
+#### - JSX
+#### - Hooks React (useState)
+#### - CSS personnalisé
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+##  Structure du projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="1406" height="858" alt="image" src="https://github.com/user-attachments/assets/bcefd91c-0fa6-40c2-9288-ff98fd459395" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation et lancement
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### - Cloner le projet :
 
-## Learn More
+git clone https://github.com/nassima-brina/TP-4-Projet-de-synth-se-React-To-Do-List-interactive-/tree/main
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### - Entrer dans le dossier :
+cd mon-projet-react
 
-### Code Splitting
+#### - Installer les dépendances :
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### - Lancer le serveur de développement :
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### L'application s'ouvre sur : [http://localhost:3000](http://localhost:3000)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##  Démo en ligne
 
-### Advanced Configuration
+👉 [https://transcendent-douhua-f7119b.netlify.app](https://transcendent-douhua-f7119b.netlify.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img width="1174" height="687" alt="image" src="https://github.com/user-attachments/assets/596e3c41-df6d-450d-96d3-f509f6336975" />
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Composants créés
 
-### `npm run build` fails to minify
+### TodoForm.js
+Formulaire contrôlé qui permet d'ajouter une nouvelle tâche. Affiche un message d'erreur si le champ est vide lors de la soumission.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### TodoItem.js
+#### Composant qui représente une seule tâche avec :
+#### - Une case à cocher pour marquer la tâche comme terminée
+#### - Un texte barré quand la tâche est terminée
+#### - Un bouton d'édition pour modifier le texte
+#### - Un bouton de suppression
+
+### TodoList.js
+Composant qui affiche la liste complète des tâches avec map(). Affiche un message si aucune tâche n'existe.
+
+---
+
+## Aperçu de l'application
+
+<img width="902" height="392" alt="image" src="https://github.com/user-attachments/assets/d613f12c-9cb9-4168-a693-0f8884fabc13" />
+
+<img width="1437" height="894" alt="image" src="https://github.com/user-attachments/assets/139e7680-34fc-45df-9e03-e8d469c9864a" />
+
+
+#### L'application permet de :
+#### - Ajouter une nouvelle tâche
+#### - Cocher une tâche comme terminée (texte barré)
+#### - Modifier le texte d'une tâche existante
+#### - Supprimer une tâche
+#### - Voir le compteur de tâches terminées
+#### - Afficher un message si le champ est vide
+
+---
+
+## Conclusion
+
+Ce projet de synthèse m'a permis de consolider l'ensemble des compétences acquises durant le cours :
+
+- La structuration d'une application React complète avec plusieurs composants
+- La gestion du state global dans `App.js` et sa transmission via les props
+- La mise en place d'interactions utilisateur avancées (ajout, modification, suppression)
+- Le déploiement d'une application React en production avec Netlify
+- L'application d'un style CSS soigné pour une interface propre et intuitive
